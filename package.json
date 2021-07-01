@@ -1,0 +1,29 @@
+{
+  "name": "MERN-App-F1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "concurrently": "^6.2.0",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "front": "cd front-end && npm start",
+    "back" : "cd Back-end && nodemon server.js",
+    "dev": "concurrently \"npm run back\" \"npm run front\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Amdounislim/MER-App-Mars-F1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Amdounislim/MER-App-Mars-F1/issues"
+  },
+  "homepage": "https://github.com/Amdounislim/MER-App-Mars-F1#readme"
+}
