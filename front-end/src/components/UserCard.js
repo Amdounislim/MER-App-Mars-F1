@@ -1,7 +1,8 @@
 import React from 'react'
 import { Card, Image, Col, Button } from 'react-bootstrap'
 import { useDispatch } from 'react-redux'
-import { deleteUser } from '../JS/actions/actionUser'
+import { deleteUser, getUser, toggleTrue } from '../JS/actions/actionUser'
+import { Link } from "react-router-dom"
 
 const UserCard = ({ user }) => {
 
@@ -63,12 +64,14 @@ const UserCard = ({ user }) => {
           </Card.Text>
         </Card.Body>
         <div className="buttons">
-          <Button variant="outline-primary edit-button">Edit</Button>
+          <Link to="/Edit-User">
+            <Button variant="outline-primary edit-button" onClick={() => { dispatch(getUser(user._id)); dispatch(toggleTrue()) }}>Edit</Button>
+          </Link>
 
           <Button variant="outline-danger edit-button" onClick={() => dispatch(deleteUser(user._id))}>Delete</Button>
         </div>
       </Card>
-    </div>
+    </div >
   )
 }
 
